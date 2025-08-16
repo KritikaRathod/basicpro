@@ -1,14 +1,13 @@
-
 import { useState } from 'react'
 
 function Count() {
-    const [display, setdisplay] = useState(false)
+  const [count, setCount] = useState(0)
+
   return (
     <div>
-      <h1>{
-        display?"hello":"by"
-      }</h1>
-      <button onClick={()=>setdisplay(!display)}>toggel</button>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>click</button>
+      <h1>counting {count}</h1>
     </div>
   )
 }
