@@ -1,17 +1,10 @@
-import React, { useState } from 'react'
-
+import React from 'react'
+import Count from './Count'
 function App() {
-  const [display, setdisplay] = useState(false)
   return (
     <div>
-            <button onClick={()=>setdisplay(!display)}>toggle</button>
-      {
-        display?<h1>anil sidhu</h1>:null
-      }
-
-   
+      <Count/>
     </div>
-
   )
 }
 
