@@ -1,9 +1,9 @@
 import React from 'react'
-import Count from './Count'
+import Skills from './skills'
 function App() {
   return (
     <div>
-      <Count/>
+     <Skills/>
     </div>
   )
 }
