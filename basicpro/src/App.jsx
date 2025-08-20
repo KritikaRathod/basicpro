@@ -1,9 +1,10 @@
 import React from 'react'
-import Skills from './skills'
+import Radio from './radio'
+
 function App() {
   return (
     <div>
-     <Skills/>
+   <Radio/>
     </div>
   )
 }
