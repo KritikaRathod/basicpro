@@ -1,19 +1,27 @@
 import React from 'react'
-import Radio from './radio'
-import Map from './Map'
-
+import { useRef } from 'react'
 function App() {
-  const useData = [
-    { name: "kritika", age: "20", id: 1 },
-    { name: "jaya", age: "22", id: 2 }
-  ]
+    const refff=useRef();
+    const handel=()=>{
 
+        refff.current.focus();
+        refff.current.style.color="red"
+        refff.current.value="123"
+    }
+    const togglehand=()=>{
+       
+        if( refff.current.style.display!="none"){
+             refff.current.style.display="none"
+        }else{
+             refff.current.style.display="inline"
+        }
+    }
   return (
     <div>
-      <h1>reuse component in loop</h1>
-      {useData.map((user) => (
-        <Map key={user.id} user={user} />
-      ))}
+      <h1>useRef</h1>
+      <button onClick={togglehand}>Toggel</button>
+      <input type="text"placeholder='enter your name' ref={refff}/>
+      <button onClick={handel}>focus</button>
     </div>
   )
 }
